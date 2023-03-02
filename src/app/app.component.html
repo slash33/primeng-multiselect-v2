@@ -1,0 +1,74 @@
+<h1>Proposition 1</h1>
+<h3>Choix périmêtre</h3>
+<h5>Choix utilisateur et groupe en groupant par utilisateur</h5>
+<p-multiSelect
+  [options]="users"
+  [group]="true"
+  [(ngModel)]="selectedGroupes"
+  defaultLabel="choisir utilisateur"
+  showClear="true"
+  display="chip"
+  (onChange)="gererContrats()"
+>
+  <ng-template let-group pTemplate="group">
+    <div class="flex align-items-center">
+      <span>{{ group.label }}</span>
+    </div>
+  </ng-template>
+</p-multiSelect>
+<h5>Choix contrats</h5>
+<p-multiSelect
+  [options]="contrats"
+  [(ngModel)]="selectedContrat"
+  defaultLabel="liste des contrats"
+  optionLabel="label"
+  display="chip"
+  (onChange)="onChangeContrats()"
+></p-multiSelect>
+
+<h1>Proposition 2</h1>
+<h3>Choix périmêtre</h3>
+<h5>Choix utilisateur + choix groupe</h5>
+<p-multiSelect
+  [options]="users2"
+  [(ngModel)]="selectedUsers2"
+  defaultLabel="choisir utilisateur"
+  optionLabel="label"
+  showClear="true"
+  display="chip"
+  (onChange)="gererUsers()"
+>
+</p-multiSelect>
+-
+<p-multiSelect
+  [options]="groupeContrats2"
+  [(ngModel)]="selectedGroupes2"
+  defaultLabel="choisir groupe"
+  showClear="true"
+  optionLabel="label"
+  display="chip"
+  (onChange)="gererGroupes()"
+>
+  <ng-template let-group pTemplate="group">
+    <div class="flex align-items-center">
+      <span>{{ group.label }}</span>
+    </div>
+  </ng-template>
+</p-multiSelect>
+<h5>Choix contrats</h5>
+<p-multiSelect
+  [options]="contrats2"
+  [(ngModel)]="selectedContrat2"
+  defaultLabel="liste des contrats"
+  optionLabel="label"
+  display="chip"
+></p-multiSelect>
+
+<h1>Hypothèse</h1>
+<h3>Organigramme utilisateur / groupe / contrat</h3>
+<p-tree
+  [value]="tree"
+  layout="vertical"
+  selectionMode="single"
+  [(selection)]="selectedFile"
+></p-tree>

@@ -1,0 +1,26 @@
+{
+  "data": [
+    {
+      "label": "utilisateur 1",
+      "value": "U1",
+      "items": [
+        { "label": "groupe 1", "value": "G1" },
+        { "label": "groupe 2", "value": "G2" },
+        { "label": "groupe 3", "value": "G3" }
+      ]
+    },
+    {
+      "label": "utilisateur 2",
+      "value": "U2",
+      "items": [
+        { "label": "groupe 1", "value": "G1" },
+        { "label": "groupe 2", "value": "G2" }
+      ]
+    },
+    {
+      "label": "utilisateur 3",
+      "value": "U3",
+      "items": [{ "label": "groupe 4", "value": "G4" }]
+    }
+  ]
+}

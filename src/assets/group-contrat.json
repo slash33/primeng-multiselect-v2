@@ -1,0 +1,31 @@
+{
+  "data": [
+    {
+      "label": "groupe 1",
+      "value": "G1",
+      "items": [
+        { "label": "contrat 1", "value": "C1" },
+        { "label": "contrat 2", "value": "C2" },
+        { "label": "contrat 3", "value": "C3" }
+      ]
+    },
+    {
+      "label": "groupe 2",
+      "value": "G2",
+      "items": [
+        { "label": "contrat 4", "value": "C4" },
+        { "label": "contrat 5", "value": "C5" }
+      ]
+    },
+    {
+      "label": "groupe 3",
+      "value": "G3",
+      "items": [{ "label": "contrat 6", "value": "C6" }]
+    },
+    {
+      "label": "groupe 4",
+      "value": "G4",
+      "items": [{ "label": "contrat 7", "value": "C7" }]
+    }
+  ]
+}

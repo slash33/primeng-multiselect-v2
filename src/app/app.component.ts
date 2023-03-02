@@ -37,42 +37,35 @@ export class AppComponent {
     this.apiService.getUsers().then((users) => {
       this.users = users;
       this.users2 = users;
-      this.apiService.getContrats().then((groupeContrats) => {
-        this.groupeContrats = groupeContrats;
-        this.groupeContrats2 = groupeContrats;
-        users.forEach((user) => {
-          const pere = {
-            label: user.label,
-            expandedIcon: 'pi pi-folder-open',
-            collapsedIcon: 'pi pi-folder',
-            expanded: true,
-            children: [],
-          };
-          if (user.items) {
-            user.items.forEach((item) => {
-              const contrats = groupeContrats.find(
-                (groupeContrat) => groupeContrat.value === item.value
-              ).items;
-              const groupe = {
-                expanded: true,
-                label: item.label,
-                expandedIcon: 'pi pi-folder-open',
-                collapsedIcon: 'pi pi-folder',
-                children: [],
-              };
-              if (contrats) {
-                contrats.forEach((contrat) => {
-                  const c = {
-                    label: contrat.label,
-                  };
-                  groupe.children.push(c);
-                });
-              }
-              pere.children.push(groupe);
-            });
-          }
-          this.tree.push(pere);
-        });
+      users.forEach((user) => {
+        const pere = {
+          label: user.label,
+          expandedIcon: 'pi pi-folder-open',
+          collapsedIcon: 'pi pi-folder',
+          expanded: true,
+          children: [],
+        };
+        if (user.items) {
+          user.items.forEach((item) => {
+            const groupe = {
+              expanded: true,
+              label: item.label,
+              expandedIcon: 'pi pi-folder-open',
+              collapsedIcon: 'pi pi-folder',
+              children: [],
+            };
+            if (item.items) {
+              item.items.forEach((contrat) => {
+                const c = {
+                  label: contrat.label,
+                };
+                groupe.children.push(c);
+              });
+            }
+            pere.children.push(groupe);
+          });
+        }
+        this.tree.push(pere);
       });
     });
   }
@@ -91,6 +84,19 @@ export class AppComponent {
 
   gererContrats() {
     this.contrats = [];
+    console.log('ben1', this.selectedGroupes);
+    const users = this.users.map((u) => {
+      u.items.map((g) => {
+        if (this.selectedGroupes.find((a) => a.value === g.value)) {
+          return g.items;
+        }
+      });
+    });
+
+    console.log('ben', users);
+
+    const contrats = [];
+    console.log('ben', contrats);
     const cs = this.groupeContrats
       .filter((groupe) => this.selectedGroupes.includes(groupe.value))
       .map((groupe) => {

@@ -4,25 +4,63 @@
       "label": "utilisateur 1",
       "value": "U1",
       "items": [
-        { "label": "groupe 1", "value": "G1" },
-        { "label": "groupe 2", "value": "G2" },
-        { "label": "groupe 3", "value": "G3" }
+        {
+          "label": "groupe 1",
+          "value": "G1",
+          "items": [
+            { "label": "contrat G1 - 1", "value": "G1C1" },
+            { "label": "contrat G1 - 2", "value": "G1C2" },
+            { "label": "contrat G1 - 3", "value": "G1C3" }
+          ]
+        },
+        {
+          "label": "groupe 2",
+          "value": "G2",
+          "items": [
+            { "label": "contrat G2 - 1", "value": "G2C1" },
+            { "label": "contrat G2 - 2", "value": "G2C2" }
+          ]
+        },
+        {
+          "label": "groupe 3",
+          "value": "G3",
+          "items": [{ "label": "contrat G3 - 1", "value": "G3C1" }]
+        }
       ]
-
-      
     },
     {
       "label": "utilisateur 2",
       "value": "U2",
       "items": [
-        { "label": "groupe 1", "value": "G1" },
-        { "label": "groupe 2", "value": "G2" }
+        {
+          "label": "groupe 1",
+          "value": "G1",
+          "items": [
+            { "label": "contrat G1 - 4", "value": "G1C4" },
+            { "label": "contrat G1 - 5", "value": "G1C5" },
+            { "label": "contrat G1 - 6", "value": "G1C6" }
+          ]
+        },
+        {
+          "label": "groupe 2",
+          "value": "G2",
+          "items": [
+            { "label": "contrat G2 - 3", "value": "G2C3" },
+            { "label": "contrat G2 - 4", "value": "G2C4" }
+          ]
+        }
       ]
     },
     {
       "label": "utilisateur 3",
       "value": "U3",
-      "items": [{ "label": "groupe 4", "value": "G4" }]
+      "items": [
+        {
+          "label": "groupe 4",
+          "value": "G4",
+          "items": [{ "label": "contrat G4 - 1", "value": "G4C1" }]
+        }
+      ]
     }
   ]
 }

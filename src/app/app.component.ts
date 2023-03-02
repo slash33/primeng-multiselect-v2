@@ -35,8 +35,13 @@ export class AppComponent {
     this.items = [];
 
     this.apiService.getUsers().then((users) => {
-      this.users = users;
-      this.users2 = users;
+      this.users = users.map((user) => {
+        user.items.forEach(
+          (item) => (item.displayLabel = user.label + '-' + item.label)
+        );
+        return user;
+      });
+      this.users2 = this.users;
       users.forEach((user) => {
         const pere = {
           label: user.label,
@@ -85,25 +90,22 @@ export class AppComponent {
   gererContrats() {
     this.contrats = [];
     console.log('ben1', this.selectedGroupes);
-    const users = this.users.map((u) => {
-      u.items.map((g) => {
-        if (this.selectedGroupes.find((a) => a.value === g.value)) {
+    const lcontrats = this.users.map((u) => {
+      return u.items.map((g) => {
+        if (this.selectedGroupes.find((a) => a === g)) {
           return g.items;
         }
       });
     });
+    this.contrats = lcontrats.reduce((acc, val) => acc.concat(val), []);
+    this.contrats = this.contrats.reduce((acc, val) => {
+      if (val) {
+        return acc.concat(val);
+      } else {
+        return acc;
+      }
+    }, []);
 
-    console.log('ben', users);
-
-    const contrats = [];
-    console.log('ben', contrats);
-    const cs = this.groupeContrats
-      .filter((groupe) => this.selectedGroupes.includes(groupe.value))
-      .map((groupe) => {
-        return groupe.items.map((item) => item);
-      });
-
-    this.contrats = cs.reduce((acc, val) => acc.concat(val), []);
     if (this.contrats.length === 0) {
       this.unselectedContrats = null;
     }

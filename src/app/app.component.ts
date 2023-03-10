@@ -48,18 +48,26 @@ export class AppComponent {
             this.groupes.push({
               label: item.label,
               value: item.value,
-              items: [{ label: user.label, value: user.value }],
+              items: [
+                { label: user.label, value: user.value, items: item.items },
+              ],
             });
           } else {
             const groupe = this.groupes.find((g) => g.value === item.value);
 
             if (groupe) {
-              groupe.items.push({ label: user.label, value: user.value });
+              groupe.items.push({
+                label: user.label,
+                value: user.value,
+                items: item.items,
+              });
             } else {
               this.groupes.push({
                 label: item.label,
                 value: item.value,
-                items: [{ label: user.label, value: user.value }],
+                items: [
+                  { label: user.label, value: user.value, items: item.items },
+                ],
               });
             }
           }
@@ -85,19 +93,13 @@ export class AppComponent {
           const t = groupe1.items.filter(
             (u) => !g.items.some((u1) => u1.value === u.value)
           );
-
-          console.log('ben1', t);
-
           g.items.push(t[0]);
-
-          console.log('ben2', g);
         } else {
           groupes.push(groupe1);
         }
       });
-
+      console.log('beng', groupes);
       this.groupes = groupes;
-      console.log('ben3', groupes);
 
       this.contrats = this.contrats.sort((t1, t2) => {
         const name1 = t1.value;
@@ -158,6 +160,7 @@ export class AppComponent {
   }
 
   gererContratsGroupe() {
+    console.log('ben', this.selectedUsers);
     let lcontrats = this.users.map((u) => {
       return u.items.map((g) => {
         if (this.selectedGroupes.find((a) => a === g)) {
@@ -172,7 +175,6 @@ export class AppComponent {
       if (val) {
         console.log('value', val);
         if (!acc.some((c) => val.some((v) => v.value === c.value))) {
-          console.log('acc1');
           return acc.concat(val);
         }
       }
@@ -186,6 +188,7 @@ export class AppComponent {
   }
 
   gererContrats() {
+    console.log('ben', this.selectedGroupes);
     let lcontrats = this.users.map((u) => {
       return u.items.map((g) => {
         if (this.selectedGroupes.find((a) => a === g)) {
@@ -198,7 +201,6 @@ export class AppComponent {
 
     lcontrats = lcontrats.reduce((acc, val) => {
       if (val) {
-        console.log('value', val);
         if (!acc.some((c) => val.some((v) => v.value === c.value))) {
           console.log('acc1');
           return acc.concat(val);
@@ -211,47 +213,5 @@ export class AppComponent {
     this.selectedContrat = this.contrats.filter((contrat) => {
       return lcontrats.some((c) => c.value === contrat.value);
     });
-  }
-
-  gererUsers() {
-    const cs = this.selectedUsers2.map((user) => {
-      return user.items.map((item) =>
-        this.groupeContrats2.find((groupe) => groupe.value === item.value)
-      );
-    });
-
-    this.selectedGroupes2 = cs
-      .reduce((acc, val) => acc.concat(val), [])
-      .reduce((acc, val) => {
-        if (!acc.includes(val)) {
-          acc.push(val);
-        }
-        return acc;
-      }, []);
-
-    this.gererContrats2();
-    console.log(this.selectedGroupes2);
-  }
-
-  gererGroupes() {
-    this.selectedUsers2 = this.users2.filter((user) =>
-      user.items.some((groupe) =>
-        this.selectedGroupes2.some((select) => select.value === groupe.value)
-      )
-    );
-
-    this.gererContrats2();
-    console.log(this.selectedUsers2);
-  }
-
-  gererContrats2() {
-    this.contrats2 = [];
-    const cs = this.selectedGroupes2.map((groupe) => {
-      return groupe.items.map((item) => item);
-    });
-
-    this.contrats2 = cs.reduce((acc, val) => acc.concat(val), []);
-    this.selectedContrat2 = this.contrats2;
-    console.log(this.selectedContrat2);
   }
 }

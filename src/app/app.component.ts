@@ -81,15 +81,16 @@ export class AppComponent {
 
   onChangeContrats() {
     if (this.contrats) {
-      this.unselectedContrats = this.contrats.filter(
-        (x) => !this.selectedContrat.includes(x)
-      );
+      this.unselectedContrats = this.contrats.filter((contrat) => {
+        return !this.selectedContrat.includes(contrat);
+        console.log('ben1', contrat);
+      });
     }
   }
 
   gererContrats() {
     this.contrats = [];
-    console.log('ben1', this.selectedGroupes);
+
     const lcontrats = this.users.map((u) => {
       return u.items.map((g) => {
         if (this.selectedGroupes.find((a) => a === g)) {

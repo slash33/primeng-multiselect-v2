@@ -56,6 +56,11 @@
       "value": "U3",
       "items": [
         {
+          "label": "groupe 1",
+          "value": "G1",
+          "items": [{ "label": "contrat G1 - 1", "value": "G1C1" }]
+        },
+        {
           "label": "groupe 4",
           "value": "G4",
           "items": [{ "label": "contrat G4 - 1", "value": "G4C1" }]

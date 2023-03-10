@@ -82,7 +82,7 @@ export class AppComponent {
   onChangeContrats() {
     if (this.contrats) {
       this.unselectedContrats = this.contrats.filter((contrat) => {
-        return !this.selectedContrat.some((c) => c.value == contrat.value);
+        return !this.selectedContrat.some((c) => c.value === contrat.value);
       });
     }
   }
@@ -119,7 +119,7 @@ export class AppComponent {
 
     this.selectedContrat = this.contrats.filter((contrat) => {
       if (this.unselectedContrats) {
-        return !this.unselectedContrats.includes(contrat);
+        return !this.unselectedContrats.some((c) => c.value === contrat.value);
       }
       return true;
     });

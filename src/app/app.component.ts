@@ -76,20 +76,28 @@ export class AppComponent {
         }
         return acc;
       }, []);
-      console.log('ben1', this.groupes);
 
-      let groupes = new Map<string, any[]>();
+      let groupes = [];
 
-      this.groupes.forEach((groupe) => {
-        if (!groupes.get(groupe.value)) {
-          groupes.set(groupe.value, groupe.items);
+      this.groupes.forEach((groupe1) => {
+        const g = groupes.find((g) => g.value === groupe1.value);
+        if (g) {
+          const t = groupe1.items.filter(
+            (u) => !g.items.some((u1) => u1.value === u.value)
+          );
+
+          console.log('ben1', t);
+
+          g.items.push(t[0]);
+
+          console.log('ben2', g);
         } else {
-          const u = groupes.get(groupe.value);
-          const t = groupe.items.filter((g) => !u.includes(g.value));
-          groupes.get(groupe.value).push(t);
+          groupes.push(groupe1);
         }
       });
-      console.log('ben', this.groupes);
+
+      this.groupes = groupes;
+      console.log('ben3', groupes);
 
       this.contrats = this.contrats.sort((t1, t2) => {
         const name1 = t1.value;

@@ -27,6 +27,8 @@ export class AppComponent {
   selectedContrat2: any[];
   selectedContrats: any[];
   unselectedContrats: any[];
+  checked: boolean = true;
+  groupes = [];
 
   constructor(
     private apiService: ApiService,
@@ -36,7 +38,32 @@ export class AppComponent {
 
     this.apiService.getUsers().then((users) => {
       this.users = users.map((user) => {
+        //this.groupes = this.groupes.concat(user.items);
         user.items.forEach((item) => {
+          if (
+            !this.groupes.some((g) =>
+              g.items.some((u) => u.value === user.value)
+            )
+          ) {
+            this.groupes.push({
+              label: item.label,
+              value: item.value,
+              items: [{ label: user.label, value: user.value }],
+            });
+          } else {
+            const groupe = this.groupes.find((g) => g.value === item.value);
+
+            if (groupe) {
+              groupe.items.push({ label: user.label, value: user.value });
+            } else {
+              this.groupes.push({
+                label: item.label,
+                value: item.value,
+                items: [{ label: user.label, value: user.value }],
+              });
+            }
+          }
+
           this.contrats = this.contrats.concat(item.items);
           item.displayLabel = user.label + '-' + item.label;
         });
@@ -49,6 +76,20 @@ export class AppComponent {
         }
         return acc;
       }, []);
+      console.log('ben1', this.groupes);
+
+      let groupes = new Map<string, any[]>();
+
+      this.groupes.forEach((groupe) => {
+        if (!groupes.get(groupe.value)) {
+          groupes.set(groupe.value, groupe.items);
+        } else {
+          const u = groupes.get(groupe.value);
+          const t = groupe.items.filter((g) => !u.includes(g.value));
+          groupes.get(groupe.value).push(t);
+        }
+      });
+      console.log('ben', this.groupes);
 
       this.contrats = this.contrats.sort((t1, t2) => {
         const name1 = t1.value;
@@ -106,6 +147,34 @@ export class AppComponent {
         return !this.selectedContrat.some((c) => c.value === contrat.value);
       });
     }
+  }
+
+  gererContratsGroupe() {
+    let lcontrats = this.users.map((u) => {
+      return u.items.map((g) => {
+        if (this.selectedGroupes.find((a) => a === g)) {
+          return g.items;
+        }
+      });
+    });
+
+    lcontrats = lcontrats.reduce((acc, val) => acc.concat(val), []);
+
+    lcontrats = lcontrats.reduce((acc, val) => {
+      if (val) {
+        console.log('value', val);
+        if (!acc.some((c) => val.some((v) => v.value === c.value))) {
+          console.log('acc1');
+          return acc.concat(val);
+        }
+      }
+      console.log('acc', acc);
+      return acc;
+    }, []);
+
+    this.selectedContrat = this.contrats.filter((contrat) => {
+      return lcontrats.some((c) => c.value === contrat.value);
+    });
   }
 
   gererContrats() {

@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { MultiSelectModule } from 'primeng/multiselect';
 import { TreeModule } from 'primeng/tree';
 import { TreeSelectModule } from 'primeng/treeselect';
+import { CheckboxModule } from 'primeng/checkbox';
 
 @NgModule({
   imports: [
@@ -19,6 +20,7 @@ import { TreeSelectModule } from 'primeng/treeselect';
     HttpClientModule,
     TreeModule,
     TreeSelectModule,
+    CheckboxModule,
   ],
   declarations: [AppComponent],
   bootstrap: [AppComponent],

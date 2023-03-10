@@ -1,7 +1,14 @@
 <h1>Proposition 1</h1>
 <h3>Choix périmêtre</h3>
 <h5>Choix utilisateur et groupe en groupant par utilisateur</h5>
+
+<div class="p-field-checkbox">
+  <p-checkbox [(ngModel)]="checked" binary="true" inputId="binary"></p-checkbox>
+  <label for="binary">Utilisateur / Group</label>
+</div>
+
 <p-multiSelect
+  *ngIf="checked"
   [options]="users"
   [group]="true"
   [(ngModel)]="selectedGroupes"
@@ -10,6 +17,22 @@
   showClear="true"
   display="chip"
   (onChange)="gererContrats()"
+>
+  <ng-template let-group pTemplate="group">
+    <div class="flex align-items-center">
+      <span>{{ group.label }}</span>
+    </div>
+  </ng-template> </p-multiSelect
+><p-multiSelect
+  *ngIf="!checked"
+  [options]="groupes"
+  [group]="true"
+  [(ngModel)]="selectedUsers"
+  defaultLabel="choisir groupe"
+  optionLabel="label"
+  showClear="true"
+  display="chip"
+  (onChange)="gererContratsGroupe()"
 >
   <ng-template let-group pTemplate="group">
     <div class="flex align-items-center">

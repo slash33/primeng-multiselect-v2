@@ -82,8 +82,7 @@ export class AppComponent {
   onChangeContrats() {
     if (this.contrats) {
       this.unselectedContrats = this.contrats.filter((contrat) => {
-        return !this.selectedContrat.includes(contrat);
-        console.log('ben1', contrat);
+        return !this.selectedContrat.some((c) => c.value == contrat.value);
       });
     }
   }
@@ -101,10 +100,14 @@ export class AppComponent {
     this.contrats = lcontrats.reduce((acc, val) => acc.concat(val), []);
     this.contrats = this.contrats.reduce((acc, val) => {
       if (val) {
-        return acc.concat(val);
-      } else {
-        return acc;
+        console.log('value', val);
+        if (!acc.some((c) => val.some((v) => (v.value = c.value)))) {
+          console.log('acc1');
+          return acc.concat(val);
+        }
       }
+      console.log('acc', acc);
+      return acc;
     }, []);
 
     if (this.contrats.length === 0) {

@@ -19,7 +19,7 @@ export class AppComponent {
   groupeContrats: any[];
   users2: any[];
   groupeContrats2: any[];
-  contrats: any[];
+  contrats: any[] = [];
   contrats2: any[];
   tree: TreeNode[] = [];
   selectedFile: TreeNode;
@@ -36,11 +36,32 @@ export class AppComponent {
 
     this.apiService.getUsers().then((users) => {
       this.users = users.map((user) => {
-        user.items.forEach(
-          (item) => (item.displayLabel = user.label + '-' + item.label)
-        );
+        user.items.forEach((item) => {
+          this.contrats = this.contrats.concat(item.items);
+          item.displayLabel = user.label + '-' + item.label;
+        });
         return user;
       });
+
+      this.contrats = this.contrats.reduce((acc, cur) => {
+        if (!acc.some((c) => c.value === cur.value)) {
+          acc.push(cur);
+        }
+        return acc;
+      }, []);
+
+      this.contrats = this.contrats.sort((t1, t2) => {
+        const name1 = t1.value;
+        const name2 = t2.value;
+        if (name1 > name2) {
+          return 1;
+        }
+        if (name1 < name2) {
+          return -1;
+        }
+        return 0;
+      });
+
       this.users2 = this.users;
       users.forEach((user) => {
         const pere = {
@@ -88,18 +109,17 @@ export class AppComponent {
   }
 
   gererContrats() {
-    this.contrats = [];
-
-    const lcontrats = this.users.map((u) => {
+    let lcontrats = this.users.map((u) => {
       return u.items.map((g) => {
         if (this.selectedGroupes.find((a) => a === g)) {
           return g.items;
         }
       });
     });
-    this.contrats = lcontrats.reduce((acc, val) => acc.concat(val), []);
 
-    this.contrats = this.contrats.reduce((acc, val) => {
+    lcontrats = lcontrats.reduce((acc, val) => acc.concat(val), []);
+
+    lcontrats = lcontrats.reduce((acc, val) => {
       if (val) {
         console.log('value', val);
         if (!acc.some((c) => val.some((v) => v.value === c.value))) {
@@ -111,17 +131,8 @@ export class AppComponent {
       return acc;
     }, []);
 
-    console.log('contrats', this.contrats);
-
-    if (this.contrats.length === 0) {
-      this.unselectedContrats = null;
-    }
-
     this.selectedContrat = this.contrats.filter((contrat) => {
-      if (this.unselectedContrats) {
-        return !this.unselectedContrats.some((c) => c.value === contrat.value);
-      }
-      return true;
+      return lcontrats.some((c) => c.value === contrat.value);
     });
   }
 

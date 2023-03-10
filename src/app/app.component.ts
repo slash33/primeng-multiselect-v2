@@ -98,10 +98,11 @@ export class AppComponent {
       });
     });
     this.contrats = lcontrats.reduce((acc, val) => acc.concat(val), []);
+
     this.contrats = this.contrats.reduce((acc, val) => {
       if (val) {
         console.log('value', val);
-        if (!acc.some((c) => val.some((v) => (v.value = c.value)))) {
+        if (!acc.some((c) => val.some((v) => v.value === c.value))) {
           console.log('acc1');
           return acc.concat(val);
         }
@@ -109,6 +110,8 @@ export class AppComponent {
       console.log('acc', acc);
       return acc;
     }, []);
+
+    console.log('contrats', this.contrats);
 
     if (this.contrats.length === 0) {
       this.unselectedContrats = null;

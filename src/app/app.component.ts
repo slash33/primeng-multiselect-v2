@@ -160,28 +160,9 @@ export class AppComponent {
   }
 
   gererContratsGroupe() {
-    console.log('ben', this.selectedUsers);
-    let lcontrats = this.users.map((u) => {
-      return u.items.map((g) => {
-        if (this.selectedGroupes.find((a) => a === g)) {
-          return g.items;
-        }
-      });
-    });
-
+    let lcontrats = this.selectedUsers.map((u) => u.items);
     lcontrats = lcontrats.reduce((acc, val) => acc.concat(val), []);
-
-    lcontrats = lcontrats.reduce((acc, val) => {
-      if (val) {
-        console.log('value', val);
-        if (!acc.some((c) => val.some((v) => v.value === c.value))) {
-          return acc.concat(val);
-        }
-      }
-      console.log('acc', acc);
-      return acc;
-    }, []);
-
+    console.log('ben', lcontrats);
     this.selectedContrat = this.contrats.filter((contrat) => {
       return lcontrats.some((c) => c.value === contrat.value);
     });

@@ -1,69 +1,580 @@
 {
   "data": [
     {
-      "label": "utilisateur 1",
+      "label": "Philippe SOUCAN",
       "value": "U1",
       "items": [
         {
-          "label": "groupe 1",
-          "value": "G1",
+          "label": "ARENH",
+          "value": "ARENH",
           "items": [
-            { "label": "contrat G1 - 1", "value": "G1C1" },
-            { "label": "contrat G1 - 2", "value": "G1C2" },
-            { "label": "contrat G1 - 3", "value": "G1C3" }
+            { "label": "00073", "value": "00073" },
+            { "label": "00077", "value": "00077" },
+            { "label": "00080", "value": "00080" },
+            { "label": "00081", "value": "00081" },
+            { "label": "00082", "value": "00082" },
+            { "label": "00083", "value": "00083" },
+            { "label": "00084", "value": "00084" },
+            { "label": "00085", "value": "00085" },
+            { "label": "00086", "value": "00086" },
+            { "label": "00087", "value": "00087" },
+            { "label": "00088", "value": "00088" },
+            { "label": "00089", "value": "00089" },
+            { "label": "00090", "value": "00090" },
+            { "label": "00091", "value": "00091" },
+            { "label": "00092", "value": "00092" },
+            { "label": "00093", "value": "00093" },
+            { "label": "00094", "value": "00094" },
+            { "label": "00095", "value": "00095" },
+            { "label": "FRANCE", "value": "FRANCE" },
+            { "label": "HORS_UE", "value": "HORS_UE" },
+            { "label": "UE", "value": "UE" }
           ]
         },
         {
-          "label": "groupe 2",
-          "value": "G2",
-          "items": [
-            { "label": "contrat G2 - 1", "value": "G2C1" },
-            { "label": "contrat G2 - 2", "value": "G2C2" }
-          ]
-        },
-        {
-          "label": "groupe 3",
-          "value": "G3",
-          "items": [{ "label": "contrat G3 - 1", "value": "G3C1" }]
+          "label": "DIV",
+          "value": "DIV",
+          "items": [{ "label": "02057", "value": "02057" }]
         }
       ]
     },
     {
-      "label": "utilisateur 2",
+      "label": "Sandrine AMODRU",
       "value": "U2",
       "items": [
         {
-          "label": "groupe 1",
-          "value": "G1",
+          "label": "CLT",
+          "value": "CLT",
           "items": [
-            { "label": "contrat G1 - 4", "value": "G1C4" },
-            { "label": "contrat G1 - 5", "value": "G1C5" },
-            { "label": "contrat G1 - 6", "value": "G1C6" }
-          ]
-        },
-        {
-          "label": "groupe 2",
-          "value": "G2",
-          "items": [
-            { "label": "contrat G2 - 3", "value": "G2C3" },
-            { "label": "contrat G2 - 4", "value": "G2C4" }
+            { "label": "00014", "value": "00014" },
+            { "label": "02054", "value": "02054" },
+            { "label": "02078", "value": "02078" }
           ]
         }
       ]
     },
     {
-      "label": "utilisateur 3",
+      "label": "LINDA BONNA",
       "value": "U3",
       "items": [
         {
-          "label": "groupe 1",
-          "value": "G1",
-          "items": [{ "label": "contrat G1 - 1", "value": "G1C1" }]
+          "label": "CLT",
+          "value": "CLT",
+          "items": [
+            { "label": "00002", "value": "00002" },
+            { "label": "00013", "value": "00013" },
+            { "label": "01079", "value": "01079" },
+            { "label": "01081", "value": "01081" },
+            { "label": "02024", "value": "02024" },
+            { "label": "02095", "value": "02095" },
+            { "label": "02096", "value": "02096" },
+            { "label": "02099", "value": "02099" },
+            { "label": "02103", "value": "02103" },
+            { "label": "02104", "value": "02104" },
+            { "label": "02115", "value": "02115" }
+          ]
         },
         {
-          "label": "groupe 4",
-          "value": "G4",
-          "items": [{ "label": "contrat G4 - 1", "value": "G4C1" }]
+          "label": "HYDRO",
+          "value": "HYDRO",
+          "items": [
+            { "label": "00004", "value": "00004" },
+            { "label": "00030", "value": "00030" },
+            { "label": "00031", "value": "00031" },
+            { "label": "00032", "value": "00032" },
+            { "label": "00033", "value": "00033" },
+            { "label": "00045", "value": "00045" },
+            { "label": "00071", "value": "00071" },
+            { "label": "01103", "value": "01103" },
+            { "label": "01107", "value": "01107" },
+            { "label": "01118", "value": "01118" },
+            { "label": "02118", "value": "02118" }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Jean-Paul COSNA",
+      "value": "U4",
+      "items": [
+        {
+          "label": "BOUCHAIN",
+          "value": "BOUCHAIN",
+          "items": [{ "label": "01200", "value": "01200" }]
+        }
+      ]
+    },
+    {
+      "label": "FERLIN DURAN",
+      "value": "U5",
+      "items": [
+        {
+          "label": "ME OA",
+          "value": "ME OA",
+          "items": [
+            { "label": "01300", "value": "01300" },
+            { "label": "01301", "value": "01301" },
+            { "label": "01302", "value": "01302" },
+            { "label": "01303", "value": "01303" },
+            { "label": "01304", "value": "01304" },
+            { "label": "01305", "value": "01305" },
+            { "label": "01306", "value": "01306" },
+            { "label": "01307", "value": "01307" },
+            { "label": "01308", "value": "01308" },
+            { "label": "01309", "value": "01309" },
+            { "label": "01310", "value": "01310" },
+            { "label": "01311", "value": "01311" },
+            { "label": "01312", "value": "01312" },
+            { "label": "01313", "value": "01313" },
+            { "label": "01314", "value": "01314" },
+            { "label": "01315", "value": "01315" },
+            { "label": "01316", "value": "01316" },
+            { "label": "01317", "value": "01317" },
+            { "label": "01318", "value": "01318" },
+            { "label": "01319", "value": "01319" },
+            { "label": "01320", "value": "01320" },
+            { "label": "01321", "value": "01321" },
+            { "label": "01322", "value": "01322" },
+            { "label": "01323", "value": "01323" },
+            { "label": "01324", "value": "01324" },
+            { "label": "01325", "value": "01325" },
+            { "label": "01326", "value": "01326" },
+            { "label": "01327", "value": "01327" },
+            { "label": "02082", "value": "02082" },
+            { "label": "02084", "value": "02084" },
+            { "label": "02085", "value": "02085" },
+            { "label": "02088", "value": "02088" }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Natacha FER",
+      "value": "U6",
+      "items": [
+        {
+          "label": "BCO",
+          "value": "BCO",
+          "items": [{ "label": "01041", "value": "01041" }]
+        },
+        {
+          "label": "DIV",
+          "value": "DIV",
+          "items": [
+            { "label": "00060", "value": "00060" },
+            { "label": "02060", "value": "02060" }
+          ]
+        },
+        {
+          "label": "NRJV",
+          "value": "NRJV",
+          "items": [
+            { "label": "01010", "value": "01010" },
+            { "label": "01046", "value": "01046" },
+            { "label": "01067", "value": "01067" },
+            { "label": "01072", "value": "01072" }
+          ]
+        },
+        {
+          "label": "OLD",
+          "value": "OLD",
+          "items": [
+            { "label": "00027", "value": "00027" },
+            { "label": "00052", "value": "00052" },
+            { "label": "02026", "value": "02026" }
+          ]
+        },
+        {
+          "label": "OSG",
+          "value": "OSG",
+          "items": [
+            { "label": "00040", "value": "00040" },
+            { "label": "01100", "value": "01100" }
+          ]
+        },
+        {
+          "label": "PART",
+          "value": "PART",
+          "items": [
+            { "label": "00005", "value": "00005" },
+            { "label": "00006", "value": "00006" },
+            { "label": "00008", "value": "00008" },
+            { "label": "00010", "value": "00010" },
+            { "label": "00011", "value": "00011" },
+            { "label": "00015", "value": "00015" },
+            { "label": "00016", "value": "00016" },
+            { "label": "00020", "value": "00020" },
+            { "label": "00021", "value": "00021" },
+            { "label": "00034", "value": "00034" },
+            { "label": "00039", "value": "00039" },
+            { "label": "00074", "value": "00074" },
+            { "label": "02070", "value": "02070" },
+            { "label": "02071", "value": "02071" },
+            { "label": "02072", "value": "02072" }
+          ]
+        },
+        {
+          "label": "TP",
+          "value": "TP",
+          "items": [{ "label": "01070", "value": "01070" }]
+        }
+      ]
+    },
+    {
+      "label": "Christelle FRANTZ",
+      "value": "U7",
+      "items": [
+        {
+          "label": "CO2",
+          "value": "CO2",
+          "items": [
+            { "label": "01024", "value": "01024" },
+            { "label": "01025", "value": "01025" },
+            { "label": "01095", "value": "01095" },
+            { "label": "01098", "value": "01098" }
+          ]
+        },
+        {
+          "label": "DIV",
+          "value": "DIV",
+          "items": [
+            { "label": "02101", "value": "02101" },
+            { "label": "02102", "value": "02102" },
+            { "label": "02112", "value": "02112" }
+          ]
+        },
+        {
+          "label": "OLD",
+          "value": "OLD",
+          "items": [{ "label": "01045", "value": "01045" }]
+        },
+        {
+          "label": "RTE",
+          "value": "RTE",
+          "items": [
+            { "label": "02001", "value": "02001" },
+            { "label": "02003", "value": "02003" },
+            { "label": "02008", "value": "02008" },
+            { "label": "02040", "value": "02040" },
+            { "label": "02067", "value": "02067" },
+            { "label": "02075", "value": "02075" },
+            { "label": "02119", "value": "02119" }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "JOHANN GILO",
+      "value": "U8",
+      "items": [
+        {
+          "label": "OLD",
+          "value": "OLD",
+          "items": [{ "label": "02058", "value": "02058" }]
+        },
+        {
+          "label": "OSG",
+          "value": "OSG",
+          "items": [{ "label": "02100", "value": "02100" }]
+        },
+        {
+          "label": "RTE",
+          "value": "RTE",
+          "items": [
+            { "label": "02000", "value": "02000" },
+            { "label": "02005", "value": "02005" }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Chlris LABATU",
+      "value": "U9",
+      "items": [
+        {
+          "label": "NRJV",
+          "value": "NRJV",
+          "items": [{ "label": "00055", "value": "00055" }]
+        },
+        {
+          "label": "CO2",
+          "value": "CO2",
+          "items": [
+            { "label": "01096", "value": "01096" },
+            { "label": "01099", "value": "01099" }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "VALERIE MARCHA",
+      "value": "U10",
+      "items": [
+        {
+          "label": "COMBU",
+          "value": "COMBU",
+          "items": [
+            { "label": "00050", "value": "00050" },
+            { "label": "02061", "value": "02061" },
+            { "label": "02093", "value": "02093" }
+          ]
+        },
+        {
+          "label": "OLD",
+          "value": "OLD",
+          "items": [{ "label": "02090", "value": "02090" }]
+        },
+        {
+          "label": "OSG",
+          "value": "OSG",
+          "items": [
+            { "label": "01094", "value": "01094" },
+            { "label": "02020", "value": "02020" }
+          ]
+        },
+        {
+          "label": "RTE",
+          "value": "RTE",
+          "items": [{ "label": "02006", "value": "02006" }]
+        }
+      ]
+    },
+    {
+      "label": "Thierry MICHEL-CHABA",
+      "value": "U11",
+      "items": [
+        {
+          "label": "CAPA",
+          "value": "CAPA",
+          "items": [
+            { "label": "01110", "value": "01110" },
+            { "label": "01111", "value": "01111" },
+            { "label": "01112", "value": "01112" },
+            { "label": "01114", "value": "01114" },
+            { "label": "02083", "value": "02083" },
+            { "label": "02203", "value": "02203" }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "NGUYEN THI THU TAO",
+      "value": "U12",
+      "items": [
+        {
+          "label": "OSG",
+          "value": "OSG",
+          "items": [{ "label": "01119", "value": "01119" }]
+        }
+      ]
+    },
+    {
+      "label": "JESSICA NEU",
+      "value": "U13",
+      "items": [
+        {
+          "label": "CLT",
+          "value": "CLT",
+          "items": [
+            { "label": "01036", "value": "01036" },
+            { "label": "02028", "value": "02028" },
+            { "label": "02053", "value": "02053" },
+            { "label": "02076", "value": "02076" },
+            { "label": "02097", "value": "02097" },
+            { "label": "02120", "value": "02120" }
+          ]
+        },
+        {
+          "label": "DIV",
+          "value": "DIV",
+          "items": [
+            { "label": "02111", "value": "02111" },
+            { "label": "02113", "value": "02113" },
+            { "label": "02114", "value": "02114" }
+          ]
+        },
+        {
+          "label": "OSG",
+          "value": "OSG",
+          "items": [
+            { "label": "00046", "value": "00046" },
+            { "label": "01000", "value": "01000" },
+            { "label": "01001", "value": "01001" },
+            { "label": "01034", "value": "01034" },
+            { "label": "01035", "value": "01035" },
+            { "label": "01069", "value": "01069" },
+            { "label": "01078", "value": "01078" },
+            { "label": "01087", "value": "01087" },
+            { "label": "01090", "value": "01090" },
+            { "label": "01093", "value": "01093" },
+            { "label": "01097", "value": "01097" },
+            { "label": "01106", "value": "01106" },
+            { "label": "01116", "value": "01116" },
+            { "label": "01117", "value": "01117" },
+            { "label": "02063", "value": "02063" },
+            { "label": "02086", "value": "02086" },
+            { "label": "02087", "value": "02087" },
+            { "label": "02117", "value": "02117" }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Sandrine ROUSSIA",
+      "value": "U14",
+      "items": [
+        {
+          "label": "CO2",
+          "value": "CO2",
+          "items": [{ "label": "02055", "value": "02055" }]
+        },
+        {
+          "label": "DIV",
+          "value": "DIV",
+          "items": [
+            { "label": "00075", "value": "00075" },
+            { "label": "00076", "value": "00076" },
+            { "label": "01105", "value": "01105" }
+          ]
+        },
+        {
+          "label": "GAZ",
+          "value": "GAZ",
+          "items": [
+            { "label": "00068", "value": "00068" },
+            { "label": "01004", "value": "01004" },
+            { "label": "01023", "value": "01023" },
+            { "label": "01102", "value": "01102" },
+            { "label": "01115", "value": "01115" }
+          ]
+        },
+        {
+          "label": "SLOE",
+          "value": "SLOE",
+          "items": [
+            { "label": "02031", "value": "02031" },
+            { "label": "02041", "value": "02041" },
+            { "label": "02043", "value": "02043" },
+            { "label": "02045", "value": "02045" },
+            { "label": "02046", "value": "02046" },
+            { "label": "02047", "value": "02047" },
+            { "label": "02048", "value": "02048" },
+            { "label": "02049", "value": "02049" },
+            { "label": "02052", "value": "02052" },
+            { "label": "02069", "value": "02069" }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Sandrine ROUSSIA",
+      "value": "U15",
+      "items": [
+        {
+          "label": "DIV",
+          "value": "DIV",
+          "items": [
+            { "label": "02109", "value": "02109" },
+            { "label": "02116", "value": "02116" }
+          ]
+        },
+        {
+          "label": "ELD",
+          "value": "ELD",
+          "items": [
+            { "label": "01500", "value": "01500" },
+            { "label": "01501", "value": "01501" },
+            { "label": "01502", "value": "01502" },
+            { "label": "01503", "value": "01503" },
+            { "label": "01504", "value": "01504" },
+            { "label": "01505", "value": "01505" },
+            { "label": "01506", "value": "01506" },
+            { "label": "01507", "value": "01507" },
+            { "label": "01508", "value": "01508" },
+            { "label": "01509", "value": "01509" },
+            { "label": "01510", "value": "01510" },
+            { "label": "01511", "value": "01511" },
+            { "label": "01512", "value": "01512" },
+            { "label": "01513", "value": "01513" },
+            { "label": "01514", "value": "01514" },
+            { "label": "01515", "value": "01515" },
+            { "label": "01516", "value": "01516" },
+            { "label": "01517", "value": "01517" },
+            { "label": "01518", "value": "01518" },
+            { "label": "01519", "value": "01519" },
+            { "label": "01520", "value": "01520" },
+            { "label": "01521", "value": "01521" },
+            { "label": "01522", "value": "01522" },
+            { "label": "01523", "value": "01523" },
+            { "label": "01524", "value": "01524" },
+            { "label": "01525", "value": "01525" },
+            { "label": "01526", "value": "01526" },
+            { "label": "01527", "value": "01527" },
+            { "label": "01528", "value": "01528" },
+            { "label": "02108", "value": "02108" }
+          ]
+        },
+        {
+          "label": "RTE",
+          "value": "RTE",
+          "items": [
+            { "label": "02015", "value": "02015" },
+            { "label": "02068", "value": "02068" },
+            { "label": "02080", "value": "02080" }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Thierry ZABAL",
+      "value": "U16",
+      "items": [
+        {
+          "label": "CAPA",
+          "value": "CAPA",
+          "items": [
+            { "label": "02081", "value": "02081" },
+            { "label": "02089", "value": "02089" },
+            { "label": "02200", "value": "02200" },
+            { "label": "02201", "value": "02201" },
+            { "label": "02202", "value": "02202" }
+          ]
+        },
+        {
+          "label": "DIV",
+          "value": "DIV",
+          "items": [{ "label": "01109", "value": "01109" }]
+        },
+        {
+          "label": "MCA",
+          "value": "MCA",
+          "items": [
+            { "label": "02106", "value": "02106" },
+            { "label": "02204", "value": "02204" }
+          ]
+        },
+        {
+          "label": "NRJV",
+          "value": "NRJV",
+          "items": [
+            { "label": "01007", "value": "01007" },
+            { "label": "01008", "value": "01008" },
+            { "label": "01066", "value": "01066" },
+            { "label": "01108", "value": "01108" },
+            { "label": "01113", "value": "01113" },
+            { "label": "02059", "value": "02059" },
+            { "label": "02094", "value": "02094" },
+            { "label": "02107", "value": "02107" },
+            { "label": "02110", "value": "02110" }
+          ]
+        },
+        {
+          "label": "OLD",
+          "value": "OLD",
+          "items": [
+            { "label": "02091", "value": "02091" },
+            { "label": "02092", "value": "02092" }
+          ]
         }
       ]
     }
